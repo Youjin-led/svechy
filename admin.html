@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Svetlo - админка</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Svetlo"><span class="brand-mark">Svetlo</span></a>
+    <nav class="nav" aria-label="Навигация">
+      <a href="index.html">Сайт</a>
+      <a href="blog.html">Блог</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="wholesale.html">Опт</a>
+      <a href="maker-goods.html">Свечевары</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section admin page-section" data-admin-page>
+      <div class="section-head">
+        <p class="eyebrow">Админка</p>
+        <h1>Управление контентом сайта</h1>
+        <p class="admin-status" data-admin-status>Данные загружаются...</p>
+      </div>
+
+      <div class="admin-layout">
+        <article class="admin-panel">
+          <h2>Статьи блога</h2>
+          <form class="admin-form" data-admin-form="blog">
+            <input name="tag" placeholder="Тема: Отдушки" />
+            <input name="title" placeholder="Заголовок статьи" required />
+            <textarea name="text" placeholder="Короткий разбор товара" required></textarea>
+            <input name="url" placeholder="Ссылка, например category.html?section=maker&item=Отдушки" />
+            <button class="button primary" type="submit">Добавить статью</button>
+          </form>
+          <div class="admin-list" data-admin-list="blog"></div>
+        </article>
+
+        <article class="admin-panel">
+          <h2>Отзывы</h2>
+          <form class="admin-form" data-admin-form="reviews">
+            <input name="name" placeholder="Имя клиента" required />
+            <input name="meta" placeholder="Кто клиент: магазин, студия, селлер" />
+            <input name="title" placeholder="Заголовок отзыва" required />
+            <textarea name="text" placeholder="Текст отзыва" required></textarea>
+            <select name="rating">
+              <option value="5">5 звезд</option>
+              <option value="4">4 звезды</option>
+              <option value="3">3 звезды</option>
+              <option value="2">2 звезды</option>
+              <option value="1">1 звезда</option>
+            </select>
+            <button class="button primary" type="submit">Добавить отзыв</button>
+          </form>
+          <div class="admin-list" data-admin-list="reviews"></div>
+        </article>
+
+        <article class="admin-panel">
+          <h2>Подразделы</h2>
+          <form class="admin-form" data-admin-form="categories">
+            <select name="section">
+              <option value="wholesale">Оптовые продажи</option>
+              <option value="maker">Товары для свечеваров</option>
+            </select>
+            <input name="name" placeholder="Название подраздела" required />
+            <input name="label" placeholder="Метка: Опт / Материалы / Формы" />
+            <textarea name="description" placeholder="Описание подраздела"></textarea>
+            <select name="color">
+              <option value="red">red</option>
+              <option value="blue">blue</option>
+              <option value="wine">wine</option>
+              <option value="blush">blush</option>
+            </select>
+            <button class="button primary" type="submit">Добавить подраздел</button>
+          </form>
+          <div class="admin-list" data-admin-list="categories"></div>
+        </article>
+
+        <article class="admin-panel">
+          <h2>Товарные карточки</h2>
+          <form class="admin-form" data-admin-form="products">
+            <select name="section" data-admin-product-section>
+              <option value="wholesale">Оптовые продажи</option>
+              <option value="maker">Товары для свечеваров</option>
+            </select>
+            <select name="category" data-admin-product-category></select>
+            <input name="title" placeholder="Название товара" required />
+            <textarea name="description" placeholder="Короткое описание товара"></textarea>
+            <input name="price" type="number" min="0" step="1" placeholder="Цена за штуку" required />
+            <input name="image" placeholder="Фото, например assets/candle-product-01.png" />
+            <select name="color">
+              <option value="red">red</option>
+              <option value="blue">blue</option>
+              <option value="wine">wine</option>
+              <option value="blush">blush</option>
+            </select>
+            <button class="button primary" type="submit">Добавить товар</button>
+          </form>
+          <div class="admin-list" data-admin-list="products"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <canvas id="candleCanvas" class="diagnostic-canvas" aria-hidden="true"></canvas>
+  <script src="main.js"></script>
+</body>
+</html>
