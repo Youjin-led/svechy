@@ -13,7 +13,8 @@ const palettes = {
 };
 
 const contacts = {
-  email: "hello@lumiere-atelier.example"
+  email: "Svetlo.candles@yandex.com",
+  whatsapp: "https://wa.me/79264817670"
 };
 const cartStorageKey = "svetlo-cart";
 const categoryCovers = {
@@ -27,7 +28,7 @@ const categoryCovers = {
   "wholesale:Уход за волосами": "assets/candle-product-09.png",
   "wholesale:Уход за лицом": "assets/candle-product-11.png",
   "wholesale:Подарочные наборы": "assets/candle-product-06.png",
-  "wholesale:Аромадифузоры / автопарфюм": "assets/candle-product-03.png",
+  "wholesale:Аромадиффузоры / автопарфюм": "assets/candle-product-03.png",
   "wholesale:Рум спреи": "assets/candle-product-11.png",
   "maker:Красители": "assets/maker-cover-dyes.png",
   "maker:Вощина": "assets/maker-cover-wax-sheets.png",
@@ -57,7 +58,7 @@ const categoryDetails = {
       "Уход за волосами": "Позиции для базового и сезонного ухода за волосами в подарочном или розничном формате.",
       "Уход за лицом": "Аккуратные уходовые товары для наборов, витрин и небольших партий.",
       "Подарочные наборы": "Готовые комплекты под событие, сезон, корпоративный заказ или розничную выкладку.",
-      "Аромадифузоры / автопарфюм": "Ароматы для дома и авто в единой стилистике бренда или коллекции.",
+      "Аромадиффузоры / автопарфюм": "Ароматы для дома и авто в единой стилистике бренда или коллекции.",
       "Рум спреи": "Спреи для помещений, текстиля и ароматических коллекций."
     }
   },
@@ -171,8 +172,10 @@ function buildCartMessage(items) {
 function updateCartLinks(message) {
   const encoded = encodeURIComponent(message);
   const email = document.querySelector("[data-send-cart='email']");
+  const whatsapp = document.querySelector("[data-send-cart='whatsapp']");
   if (email) email.href =
     `mailto:${contacts.email}?subject=${encodeURIComponent("Заказ Svetlo")}&body=${encoded}`;
+  if (whatsapp) whatsapp.href = `${contacts.whatsapp}?text=${encoded}`;
 }
 
 function renderCartPage() {
