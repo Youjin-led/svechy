@@ -1,0 +1,29 @@
+{
+  "workflow": "refine_baked_jellyfish_motion",
+  "source_asset": "C:\\Users\\Ардор\\OneDrive\\Рабочий стол\\3d-form-2_work_v2\\assets\\baked_geonodes_jellyfish.glb",
+  "glb": "C:\\Users\\Ардор\\OneDrive\\Рабочий стол\\JS\\ДЗ-1\\output\\attempts\\realistic_baked_jellyfish_motion_v3\\jellyfish_realistic_motion.glb",
+  "blend": "C:\\Users\\Ардор\\OneDrive\\Рабочий стол\\JS\\ДЗ-1\\output\\attempts\\realistic_baked_jellyfish_motion_v3\\jellyfish_realistic_motion.blend",
+  "shape_keys": [
+    "Basis",
+    "anticipation_tuck",
+    "power_contract",
+    "jet_recoil",
+    "elastic_reopen",
+    "tentacle_lag_left",
+    "tentacle_lag_right",
+    "tentacle_follow_impulse",
+    "long_stream_hold",
+    "water_settle_wave"
+  ],
+  "frames": {
+    "1": "rest",
+    "11": "fast bell contraction / power stroke",
+    "22": "elastic reopen",
+    "33": "tentacle water lag"
+  },
+  "reference_notes": [
+    "fast bell contraction creates propulsion",
+    "bell relaxation is slower/passive",
+    "tentacles lag behind the bell and continue waving during drift"
+  ]
+}

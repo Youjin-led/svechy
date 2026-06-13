@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "score": 1,
+  "deltas": {
+    "colorDistance": 0,
+    "brightnessDelta": 0,
+    "saturationDelta": 0,
+    "activeDelta": 0
+  },
+  "reference": {
+    "file": "C:\\Users\\Ардор\\OneDrive\\Рабочий стол\\JS\\ДЗ-1\\output\\preview.png",
+    "bytes": 1909986
+  },
+  "candidate": {
+    "file": "C:\\Users\\Ардор\\OneDrive\\Рабочий стол\\JS\\ДЗ-1\\output\\preview.png",
+    "bytes": 1909986
+  },
+  "notes": [
+    "No reference/candidate arguments were provided, so this ran the npm-script self-test.",
+    "Pass --reference and --candidate to run the browser-based heuristic matcher."
+  ]
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920mm" height="620mm" viewBox="0 0 1920 620">
+<defs>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+    <path d="M0,0 L8,4 L0,8 Z" fill="#555"/>
+  </marker>
+  <radialGradient id="chipRed" cx="50%" cy="45%" r="60%">
+    <stop offset="0%" stop-color="#ffcc79"/>
+    <stop offset="40%" stop-color="#aa1610"/>
+    <stop offset="100%" stop-color="#260604"/>
+  </radialGradient>
+  <radialGradient id="chipBlack" cx="50%" cy="45%" r="60%">
+    <stop offset="0%" stop-color="#ffd890"/>
+    <stop offset="42%" stop-color="#111"/>
+    <stop offset="100%" stop-color="#040403"/>
+  </radialGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<style>
+  .bg{fill:#ffffff}
+  .frame{fill:none;stroke:#d58a25;stroke-width:5}
+  .gold{fill:none;stroke:#d79b38;stroke-width:3}
+  .thinGold{fill:none;stroke:#d79b38;stroke-width:1.4}
+  .dim{fill:none;stroke:#555;stroke-width:1.2;marker-start:url(#arrow);marker-end:url(#arrow)}
+  .guide{fill:none;stroke:#999;stroke-width:.8;stroke-dasharray:12 8}
+  .label{font-family:Arial,sans-serif;font-size:24px;fill:#111}
+  .small{font-family:Arial,sans-serif;font-size:16px;fill:#111}
+  .tiny{font-family:Arial,sans-serif;font-size:12px;fill:#111}
+  .card{fill:#c69043;stroke:#2b1708;stroke-width:2}
+  .cardLine{fill:none;stroke:#2b1708;stroke-width:2}
+  .mirror{fill:rgba(110,180,220,.15);stroke:#53a9df;stroke-width:2}
+  .mdf{fill:rgba(205,143,58,.16);stroke:#8f5b14;stroke-width:2}
+  .cut{fill:none;stroke:#111;stroke-width:1.4}
+  .engrave{fill:none;stroke:#1266a8;stroke-width:1;stroke-dasharray:9 6}
+  text{letter-spacing:0}
+</style>
+<rect class="bg" x="0" y="0" width="1920" height="620"/>
+<text class="label" x="32" y="42">03 MDF карты: 6 шт. 260 x 390 мм</text>
+<g><rect class="cut" x="45" y="105" width="260" height="390" rx="16"/><rect class="engrave" x="63" y="123" width="224" height="354" rx="10"/><text class="label" x="69" y="164">10</text><path class="engrave" d="M 175 225 C 115 285 149 345 175 340 C 201 345 235 285 175 225 Z M 175 340 L 151 390 L 199 390 Z"/></g><g><rect class="cut" x="350" y="105" width="260" height="390" rx="16"/><rect class="engrave" x="368" y="123" width="224" height="354" rx="10"/><text class="label" x="374" y="164">J</text><path class="engrave" d="M 480 225 C 420 285 454 345 480 340 C 506 345 540 285 480 225 Z M 480 340 L 456 390 L 504 390 Z"/></g><g><rect class="cut" x="655" y="105" width="260" height="390" rx="16"/><rect class="engrave" x="673" y="123" width="224" height="354" rx="10"/><text class="label" x="679" y="164">J</text><path class="engrave" d="M 785 225 C 725 285 759 345 785 340 C 811 345 845 285 785 225 Z M 785 340 L 761 390 L 809 390 Z"/></g><g><rect class="cut" x="960" y="105" width="260" height="390" rx="16"/><rect class="engrave" x="978" y="123" width="224" height="354" rx="10"/><text class="label" x="984" y="164">Q</text><path class="engrave" d="M 1090 225 C 1030 285 1064 345 1090 340 C 1116 345 1150 285 1090 225 Z M 1090 340 L 1066 390 L 1114 390 Z"/></g><g><rect class="cut" x="1265" y="105" width="260" height="390" rx="16"/><rect class="engrave" x="1283" y="123" width="224" height="354" rx="10"/><text class="label" x="1289" y="164">K</text><path class="engrave" d="M 1395 225 C 1335 285 1369 345 1395 340 C 1421 345 1455 285 1395 225 Z M 1395 340 L 1371 390 L 1419 390 Z"/></g><g><rect class="cut" x="1570" y="105" width="260" height="390" rx="16"/><rect class="engrave" x="1588" y="123" width="224" height="354" rx="10"/><text class="label" x="1594" y="164">A</text><path class="engrave" d="M 1700 225 C 1640 285 1674 345 1700 340 C 1726 345 1760 285 1700 225 Z M 1700 340 L 1676 390 L 1724 390 Z"/></g>
+<rect x="1560" y="510" width="330" height="82" fill="none" stroke="#111"/>
+<text class="small" x="1578" y="538">Casino mirror composition</text>
+<text class="tiny" x="1578" y="564">Габарит: 2130 x 1850 x 235 мм</text>
+<text class="tiny" x="1578" y="586">Чистая версия по референсу</text>
+</svg>

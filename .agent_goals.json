@@ -1,0 +1,24 @@
+{
+  "goals": [
+    {
+      "id": 1,
+      "created_at": "2026-05-21T16:43:42+00:00",
+      "updated_at": "2026-05-21T16:54:38+00:00",
+      "title": "Max agent upgrade smoke",
+      "status": "done",
+      "domain": "coding",
+      "strategy": "default",
+      "notes": "Max upgrade smoke goal completed.",
+      "steps": [
+        {
+          "id": 1,
+          "created_at": "2026-05-21T16:44:46+00:00",
+          "updated_at": "2026-05-21T16:47:35+00:00",
+          "title": "Verify max upgrade tools",
+          "status": "done",
+          "notes": "Goal runner smoke passed."
+        }
+      ]
+    }
+  ]
+}

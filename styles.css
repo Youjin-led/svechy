@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
-
+/* stylelint-disable-next-line */
 :root {
   color-scheme: light;
   --ink: #171615;
@@ -127,7 +127,7 @@ a { color: inherit; text-decoration: none; }
     linear-gradient(105deg, rgba(109, 0, 24, 0.18) 0%, rgba(246, 241, 237, 0.74) 34%, rgba(126, 172, 243, 0.24) 78%),
     linear-gradient(90deg, rgba(246, 241, 237, 0.9) 0%, rgba(246, 241, 237, 0.56) 34%, rgba(246, 241, 237, 0.06) 72%),
     linear-gradient(0deg, rgba(23, 22, 21, 0.06), rgba(23, 22, 21, 0.06)),
-    url("assets/hero-main.jpg") right -28% center / 82% auto no-repeat;
+    url("assets/hero-main.webp") right -28% center / 82% auto no-repeat;
 }
 .hero-copy {
   display: grid;
@@ -1251,7 +1251,7 @@ textarea {
     background:
       linear-gradient(180deg, rgba(109, 0, 24, 0.18) 0%, rgba(246, 241, 237, 0.76) 42%, rgba(126, 172, 243, 0.22) 100%),
       linear-gradient(0deg, rgba(23, 22, 21, 0.06), rgba(23, 22, 21, 0.06)),
-      url("assets/hero-main.jpg") 98% center / auto 84% no-repeat;
+      url("assets/hero-main.webp") 98% center / auto 84% no-repeat;
   }
   .hero-copy { padding: 32px 18px; }
   .home-contact-strip {

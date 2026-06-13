@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600mm" height="1100mm" viewBox="0 0 1600 1100">
+<defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+    <path d="M0,0 L8,4 L0,8 Z" fill="#333"/>
+  </marker>
+  <marker id="arrGold" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+    <path d="M0,0 L8,4 L0,8 Z" fill="#c78020"/>
+  </marker>
+</defs>
+<style>
+  .border{fill:#fff;stroke:#111;stroke-width:1.5}
+  .frame{fill:none;stroke:#111;stroke-width:3}
+  .thin{fill:none;stroke:#666;stroke-width:1.2}
+  .dash{fill:none;stroke:#777;stroke-width:1;stroke-dasharray:10 7}
+  .dim{fill:none;stroke:#333;stroke-width:1.1;marker-start:url(#arr);marker-end:url(#arr)}
+  .arrow{fill:none;stroke:#333;stroke-width:1.2;marker-end:url(#arr)}
+  .mirror{fill:rgba(80,160,220,.18);stroke:#1476b8;stroke-width:2}
+  .semi{fill:rgba(100,200,255,.10);stroke:#1476b8;stroke-width:2;stroke-dasharray:12 8}
+  .mdf{fill:rgba(201,143,61,.18);stroke:#9b6118;stroke-width:2}
+  .led{fill:none;stroke:#f29b22;stroke-width:4}
+  .service{fill:rgba(80,180,90,.12);stroke:#2c8b3a;stroke-width:2}
+  .warn{fill:#fff3cd;stroke:#b78300;stroke-width:1.5}
+  text{font-family:Arial,sans-serif;fill:#111;letter-spacing:0}
+  .title{font-size:26px;font-weight:700}
+  .h{font-size:18px;font-weight:700}
+  .t{font-size:15px}
+  .s{font-size:12px}
+  .stamp{font-size:11px}
+</style>
+<rect class="border" x="10" y="10" width="1580" height="1080"/>
+<text class="title" x="32" y="44">02 Разрез по глубине и слои</text>
+<rect class="warn" x="32" y="62" width="1536" height="34"/>
+<text class="t" x="44" y="84">Схема для конструктора: показывает замысел, слои и требования. Не является финальным раскроем/КД.</text>
+
+    <text class="h" x="90" y="145">Разрез по глубине 235 мм</text>
+    <rect class="frame" x="130" y="310" width="705" height="360"/>
+    <line class="dim" x1="130" y1="720" x2="835" y2="720"/><text class="t" x="445" y="707">235 мм</text>
+    <rect class="semi" x="130" y="310" width="8" height="360"/><text class="s" x="112" y="292">0: переднее полупрозрачное зеркало</text>
+    <rect class="led" x="205" y="330" width="10" height="320"/><text class="s" x="185" y="268">20-35: LED / мелкие масти</text>
+    <rect class="mdf" x="325" y="380" width="22" height="220"/><text class="s" x="305" y="635">55-85: фишки / жетоны</text>
+    <rect class="mdf" x="445" y="335" width="24" height="310"/><text class="s" x="410" y="665">90-125: карты</text>
+    <rect class="led" x="640" y="390" width="12" height="200"/><text class="s" x="595" y="292">150-190: задний декор/свет</text>
+    <rect class="mirror" x="814" y="310" width="12" height="360"/><text class="s" x="724" y="268">220-235: заднее зеркало</text>
+    <text class="h" x="920" y="150">Задача конструктора</text>
+    <text class="t" x="920" y="190">• назначить реальные зазоры;</text>
+    <text class="t" x="920" y="220">• выбрать крепления MDF-деталей;</text>
+    <text class="t" x="920" y="250">• сделать съемный/прижимной передний слой;</text>
+    <text class="t" x="920" y="280">• предусмотреть сервис LED и БП;</text>
+    <text class="t" x="920" y="310">• проверить отражения на макете.</text>
+    <rect class="service" x="900" y="380" width="470" height="170"/>
+    <text class="h" x="925" y="415">Сервисная зона</text>
+    <text class="t" x="925" y="448">Нужен доступ к контроллеру и блоку питания.</text>
+    <text class="t" x="925" y="476">Не закрывать БП без вентиляции.</text>
+    <text class="t" x="925" y="504">Провода вести по зонам, не через видимое поле.</text>
+<rect x="1260" y="1014" width="310" height="58" fill="none" stroke="#111"/>
+<text class="stamp" x="1272" y="1036">Casino infinity mirror</text>
+<text class="stamp" x="1272" y="1054">Габарит 2130 x 1850 x 235 мм</text>
+<text class="stamp" x="1272" y="1072">Лист для конструктора</text>
+</svg>

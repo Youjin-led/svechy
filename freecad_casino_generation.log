@@ -1,0 +1,150 @@
+﻿Msg: FreeCAD 1.1.1, Libs: 1.1.1R20260414 (Git shallow)
+(C) 2001-2026 FreeCAD contributors
+FreeCAD is free and open-source software licensed under the terms of LGPL2+ license.
+
+Log: Time = 2026-Jun-11 16:17:40
+Log: AppDataSkipVendor = true
+Log: AppHomePath = C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\
+Log: AppTempPath = C:\Users\EBF5~1\AppData\Local\Temp\\\
+Log: BOOST_VERSION = 1_86
+Log: BinPath = C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\bin\
+Log: BuildRepositoryURL = Unknown
+Log: BuildRevision = 20260414 (Git shallow)
+Log: BuildRevisionBranch = (HEAD detached at 0108fd4b4)
+Log: BuildRevisionDate = 2026/04/14 22:09:59
+Log: BuildRevisionHash = 0108fd4b4850cc46e625b60e53cea7a7bbe69f8d
+Log: BuildVersionMajor = 1
+Log: BuildVersionMinor = 1
+Log: BuildVersionPoint = 1
+Log: BuildVersionSuffix = 
+Log: CopyrightInfo = (C) 2001-2026 FreeCAD contributors
+FreeCAD is free and open-source software licensed under the terms of LGPL2+ license.
+
+
+Log: Debug = 0
+Log: DocPath = C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\doc\
+Log: EIGEN_VERSION = 3.4.0
+Log: ExeName = FreeCAD
+Log: ExeVendor = FreeCAD
+Log: ExeVersion = 1.1.1
+Log: LoggingConsole = 1
+Log: LoggingFile = 1
+Log: LoggingFileName = freecad_casino_generation.log
+Log: OCC_VERSION = 7.8.1
+Log: OpenFile0 = C:\Users\�����\OneDrive\������� ����\JS\��-1\tools\generate_freecad_casino_project.py
+Log: OpenFileCount = 1
+Log: PATH = C:\Users\�����\.codex\tmp\arg0\codex-arg01F58KX;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\WireGuard\;C:\Program Files\GitHub CLI\;C:\Users\�����\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\�����\AppData\Local\Programs\Python\Python312\;C:\Users\�����\AppData\Local\Programs\Python\Launcher\;C:\Users\�����\.local\bin;C:\Users\�����\AppData\Local\Microsoft\WindowsApps;C:\Users\�����\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\�����\AppData\Roaming\npm;C:\Users\�����\AppData\Local\Microsoft\WinGet\Packages\RodZill4.MaterialMaker_Microsoft.Winget.Source_8wekyb3d8bbwe\material_maker_1_6_windows;;c:\Users\�����\.vscode\extensions\openai.chatgpt-26.602.71036-win32-x64\bin\windows-x86_64
+Log: PYSIDE_VERSION = 6.8.3
+Log: PYTHON_VERSION = 3.11.15
+Log: PythonSearchPath = C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\bin\python311.zip;C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\bin\DLLs;C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\bin\Lib;C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\bin;C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\bin\Lib\site-packages
+Log: QT_VERSION = 6.8.3
+Log: RunMode = Exit
+Log: SystemParameter = C:\Users\Ардор\AppData\Roaming\FreeCAD\v1-1\system.cfg
+Log: UserAppData = C:\Users\Ардор\AppData\Roaming\FreeCAD\v1-1\
+Log: UserCachePath = C:\Users\EBF5~1\AppData\Local\Temp\\FreeCAD\v1-1\Cache\
+Log: UserConfigPath = C:\Users\Ардор\AppData\Roaming\FreeCAD\v1-1\
+Log: UserHomePath = C:/Users/Ардор
+Log: UserMacroPath = C:\Users\Ардор\AppData\Roaming\FreeCAD\v1-1\Macro\
+Log: UserParameter = C:\Users\Ардор\AppData\Roaming\FreeCAD\v1-1\user.cfg
+Log: Verbose = 
+Log: XERCESC_VERSION = 3.3.0
+Log: Create Application
+Log: Run App init script
+Log: Init: starting App::FreeCADInit.py
+Log: Init:   Searching for modules...
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\AddonManager\.\... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Assembly... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\BIM... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\CAM... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Draft... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Fem... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Help(Init.py not found)... ignore
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Idf... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Import... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Inspection... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Material... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Measure... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Mesh... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\MeshPart... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\OpenSCAD... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Part... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\PartDesign... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Plot(Init.py not found)... ignore
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Points... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\ReverseEngineering... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Robot... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Show(Init.py not found)... ignore
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Sketcher... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Spreadsheet... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Start... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Surface... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\TechDraw... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Test... done
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Tux(Init.py not found)... ignore
+Log: Init:      Initializing C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Web... done
+Log: Using C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod as module path!
+Log: System path after init:
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\bin
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\AddonManager
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\AddonManager\.\
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Assembly
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\BIM
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\CAM
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Draft
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Fem
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Help
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Idf
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Import
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Inspection
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Material
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Measure
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Mesh
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\MeshPart
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\OpenSCAD
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Part
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\PartDesign
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Plot
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Points
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\ReverseEngineering
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Robot
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Show
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Sketcher
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Spreadsheet
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Start
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Surface
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\TechDraw
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Test
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Tux
+Log:    C:\Users\Ардор\AppData\Local\Programs\FreeCAD 1.1\Mod\Web
+Log:    C:\Users\Ардор\.codex\tmp\arg0\codex-arg01F58KX
+Log:    C:\WINDOWS\system32
+Log:    C:\WINDOWS
+Log:    C:\WINDOWS\System32\Wbem
+Log:    C:\WINDOWS\System32\WindowsPowerShell\v1.0\
+Log:    C:\WINDOWS\System32\OpenSSH\
+Log:    C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common
+Log:    C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR
+Log:    C:\Program Files\Git\cmd
+Log:    C:\Program Files\nodejs\
+Log:    C:\Program Files\WireGuard\
+Log:    C:\Program Files\GitHub CLI\
+Log:    C:\Users\Ардор\AppData\Local\Programs\Python\Python312\Scripts\
+Log:    C:\Users\Ардор\AppData\Local\Programs\Python\Python312\
+Log:    C:\Users\Ардор\AppData\Local\Programs\Python\Launcher\
+Log:    C:\Users\Ардор\.local\bin
+Log:    C:\Users\Ардор\AppData\Local\Microsoft\WindowsApps
+Log:    C:\Users\Ардор\AppData\Local\Programs\Microsoft VS Code\bin
+Log:    C:\Users\Ардор\AppData\Roaming\npm
+Log:    C:\Users\Ардор\AppData\Local\Microsoft\WinGet\Packages\RodZill4.MaterialMaker_Microsoft.Winget.Source_8wekyb3d8bbwe\material_maker_1_6_windows
+Log:    
+Log:    c:\Users\Ардор\.vscode\extensions\openai.chatgpt-26.602.71036-win32-x64\bin\windows-x86_64
+Log: Init: App::FreeCADInit.py done
+Log: Init: Processing command line files
+Log: Init:     Processing file: C:/Users/�����/OneDrive/������� ����/JS/��-1/tools/generate_freecad_casino_project.py
+Err: Unknown exception while processing file: C:/Users/�����/OneDrive/������� ����/JS/��-1/tools/generate_freecad_casino_project.py 
+Log: Exiting on purpose
+Log: FreeCAD terminating...
+Log: Saving system parameter...
+Log: Saving system parameter...done
+Log: Saving user parameter...
+Log: Saving user parameter...done

@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-06-03T17:17:21",
+  "label": "redesign candle site with calculator and messenger order",
+  "files": [
+    "AGENTS.md",
+    "PROJECT_RULES.md",
+    "AGENT_MEMORY.md",
+    "DECISIONS.md",
+    "EXPERIMENTS.md",
+    "TASKS.md",
+    "AGENT_ROLES.md",
+    "PERMISSIONS.md",
+    "package.json",
+    ".agent_memory.sqlite3"
+  ]
+}

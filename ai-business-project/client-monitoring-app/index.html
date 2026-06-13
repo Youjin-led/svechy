@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Клиентский кабинет AI Monitor Studio для мониторинга интернет-источников, отчетов, выводов и мини-базы знаний.">
+    <title>Кабинет мониторинга - AI Monitor Studio</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../sales-site/index.html" aria-label="AI Monitor Studio">
+        <span>AI</span>
+        Monitor Studio
+      </a>
+      <nav aria-label="Навигация">
+        <a href="#sources">Источники</a>
+        <a href="#report">Отчет</a>
+        <a href="#knowledge">База знаний</a>
+      </nav>
+    </header>
+
+    <main class="workspace">
+      <section class="summary-panel" aria-label="Сводка проекта">
+        <div>
+          <p class="eyebrow">Клиентский кабинет</p>
+          <h1>AI-мониторинг выбранных ресурсов</h1>
+          <p>Демо показывает, как клиент будет видеть источники, свежие изменения, выводы, рекомендации и мини-базу знаний по своей рабочей области.</p>
+        </div>
+        <div class="status-grid">
+          <article>
+            <span id="sources-count">0</span>
+            <p>источников</p>
+          </article>
+          <article>
+            <span id="alerts-count">0</span>
+            <p>важных сигналов</p>
+          </article>
+          <article>
+            <span id="last-run">сегодня</span>
+            <p>последний анализ</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="layout">
+        <aside class="panel sources-panel" id="sources">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">01 · Источники</p>
+              <h2>Что проверяем</h2>
+            </div>
+            <button class="icon-button" id="reset-demo" type="button" title="Вернуть демо-данные" aria-label="Вернуть демо-данные">↺</button>
+          </div>
+
+          <form class="source-form" id="source-form">
+            <label>
+              Название
+              <input name="name" placeholder="Конкурент, маркетплейс, портал" required>
+            </label>
+            <label>
+              URL или заметка
+              <input name="url" placeholder="https://example.ru/catalog" required>
+            </label>
+            <label>
+              Что искать
+              <select name="topic">
+                <option value="prices">Цены и акции</option>
+                <option value="assortment">Ассортимент</option>
+                <option value="reviews">Отзывы</option>
+                <option value="partners">Партнеры и контакты</option>
+                <option value="tenders">Тендеры и закупки</option>
+              </select>
+            </label>
+            <button type="submit">Добавить источник</button>
+          </form>
+
+          <div class="source-list" id="source-list" aria-live="polite"></div>
+        </aside>
+
+        <section class="panel report-panel" id="report">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">02 · Отчет</p>
+              <h2>Что изменилось и что делать</h2>
+            </div>
+            <div class="actions">
+              <button id="run-analysis" type="button">Запустить анализ</button>
+              <button class="secondary" id="copy-report" type="button">Скопировать отчет</button>
+            </div>
+          </div>
+
+          <div class="run-state" aria-live="polite">
+            <div class="progress"><span id="progress-bar"></span></div>
+            <p id="run-note">Готово к анализу. В реальном внедрении сюда подключаются выбранные сайты, таблицы, RSS, почта или CRM.</p>
+          </div>
+
+          <div class="report-card">
+            <div class="report-title">
+              <strong id="report-title">Еженедельный мониторинг рынка</strong>
+              <span id="report-date">8 июня 2026</span>
+            </div>
+            <div class="insight-list" id="insight-list"></div>
+          </div>
+
+          <div class="decision-grid">
+            <article>
+              <h3>Риски</h3>
+              <ul id="risk-list"></ul>
+            </article>
+            <article>
+              <h3>Рекомендации</h3>
+              <ul id="recommendation-list"></ul>
+            </article>
+          </div>
+        </section>
+
+        <aside class="panel knowledge-panel" id="knowledge">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">03 · Мини-база знаний</p>
+              <h2>Контекст клиента</h2>
+            </div>
+          </div>
+
+          <form class="knowledge-form" id="knowledge-form">
+            <label>
+              Добавить правило или факт
+              <textarea name="note" rows="4" placeholder="Например: важны только партнеры с прямой доставкой по ЦФО"></textarea>
+            </label>
+            <button type="submit">Сохранить в базу</button>
+          </form>
+
+          <div class="knowledge-list" id="knowledge-list"></div>
+
+          <div class="assistant-box">
+            <h3>AI-консультант</h3>
+            <p id="assistant-answer">Спросите: какие изменения важнее всего для руководителя? Ответ будет собран из отчета и базы знаний.</p>
+            <button class="secondary" id="ask-assistant" type="button">Сформировать ответ</button>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

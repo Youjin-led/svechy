@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "workflow": "corrected_repeated_vertebra_unit_pass",
+  "updated": "2026-05-22T16:43:46",
+  "artifacts": {
+    "blend": "output/scene.blend",
+    "glb": "output/scene.glb",
+    "preview": "output/preview.png",
+    "source_script": "tools/refine_repeated_vertebra_unit_pass.py"
+  },
+  "scene_notes": [
+    "Corrected approach: edited the repeated NIH vertebra unit itself instead of adding external plate geometry.",
+    "Duplicated units now have clearer vertical spacing, slight per-copy rotations, wet iridescent material, and subtle pitted/worn modifiers.",
+    "Existing Blender cards are hidden in this sculpt-check render so the spine can be judged against the reference angles."
+  ],
+  "checks": [
+    "Blender file saved",
+    "GLB export completed",
+    "Preview render completed"
+  ]
+}

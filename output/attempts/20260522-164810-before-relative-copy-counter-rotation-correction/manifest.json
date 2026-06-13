@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-05-22T16:48:10",
+  "label": "before relative-copy-counter-rotation correction",
+  "copied": [
+    "preview.png",
+    "scene.blend",
+    "scene.glb",
+    "report.json"
+  ],
+  "note": "This is an archived attempt. The current scene is always output/preview.png, output/scene.blend, output/scene.glb."
+}

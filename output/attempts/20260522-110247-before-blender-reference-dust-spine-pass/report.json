@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "workflow": "custom_blender_reference_scene_real_nih_vertebra_import",
+  "reference": "c:/Users/Ардор/OneDrive/Рабочий стол/c123b688-c79a-4718-91ae-56a849481d46.png",
+  "artifacts": {
+    "blend": "output/scene.blend",
+    "glb": "output/scene.glb",
+    "preview": "output/preview.png",
+    "source_script": "tools/create_reference_spine_scene.py"
+  },
+  "scene_notes": [
+    "Central column rebuilt from a real imported NIH3D lumbar vertebra asset, duplicated into a full vertical spine rather than modeled from primitive shapes.",
+    "Source asset: C:/Users/Ардор/OneDrive/Рабочий стол/3д художник/blender-mcp-work/assets/anatomy/nih_3d_3dpx_000307/First_lumbar_vertebra_NIH3D.glb",
+    "Dense cyan, magenta, blue, and green particle cloud surrounds the central column.",
+    "Dark cinematic web-hero composition with reflective highlights and subtle UI text hints.",
+    "Latest revision restores the older successful technique: one anatomical vertebra object imported, transformed, multiplied, and styled as wet iridescent black metal.",
+    "Color pass tuned toward the reference: darker oil-slick metal base, cyan/blue highlights, magenta surface accents, and green lower particle glow.",
+    "Added a cropped texture from the supplied screenshot: assets/reference_card_sustainable_horizons.png.",
+    "Duplicated that card to 15 total instances arranged as a true equal-angle, equal-height spiral around the elongated spine. Cards are yawed around the spine so foreground, side, and rear panels form a real orbit rather than a flat billboard layout.",
+    "Replaced the old flat backdrop plane with a large inward-facing dark environment sphere named deep_black_world_shell, so the scene supports 360-degree camera orbiting.",
+    "Added camera_360_orbit_rig_rotate_z; rotate this empty around Z in Blender to orbit the camera around the spine.",
+    "Filled the 360-degree environment with colored star dust, diagonal Milky Way-like ribbons, and small blue-line constellations distributed around the spine instead of painted onto a flat background."
+  ],
+  "checks": [
+    "Blender render completed",
+    "GLB export completed",
+    "npm run qa: PASS",
+    "npm run agent:evals: PASS"
+  ]
+}

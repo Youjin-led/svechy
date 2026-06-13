@@ -310,7 +310,10 @@ function getSectionDescription(sectionKey, item) {
 }
 
 function getCategoryCover(sectionKey, item) {
-  return categoryCovers[`${sectionKey}:${item}`] || "";
+  const png = categoryCovers[`${sectionKey}:${item}`] || "";
+  if (!png) return "";
+  // Используем WebP (создан скриптом optimize-images.js)
+  return png.replace(/\.png$/i, '.webp');
 }
 
 function stars(rating) {
