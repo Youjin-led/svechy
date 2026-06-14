@@ -1232,12 +1232,11 @@ textarea {
 }
 .contact-panel a:hover { border-color: rgba(159, 31, 37, 0.38); color: var(--red); }
 .hero-dev {
-  grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 10px 18px;
-  margin: 0 clamp(18px, 4vw, 58px);
+  margin: -24px clamp(18px, 4vw, 58px) 0;
   padding: 12px 18px;
   border: 1px solid rgba(199, 136, 145, 0.28);
   border-radius: 8px;
@@ -1245,6 +1244,8 @@ textarea {
   backdrop-filter: blur(12px);
   box-shadow: 0 8px 24px rgba(23, 22, 21, 0.08);
   font-size: 13px;
+  position: relative;
+  z-index: 2;
 }
 .hero-dev span {
   color: var(--muted);
