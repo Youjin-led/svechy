@@ -113,8 +113,11 @@ function money(value) {
 
 function calculateLineTotal(unit, qty) {
   let total = unit * qty;
-  if (qty >= 30) total = Math.ceil(total * 0.92);
-  if (qty >= 80) total = Math.ceil(total * 0.86);
+  if (qty >= 1500) {
+    total = Math.ceil(total * 0.94);
+  } else if (qty >= 500) {
+    total = Math.ceil(total * 0.97);
+  }
   return total;
 }
 
@@ -256,6 +259,24 @@ function render() {
   currentCalculation = { state, calc };
   totalNode.textContent = money(calc.total);
   summaryNode.textContent = `${state.qty} шт. · ${state.title.toLowerCase()}.`;
+
+  const discountNode = document.querySelector("[data-discount-info]");
+  if (discountNode) {
+    if (state.qty >= 3000) {
+      discountNode.textContent = "Скидка по договорённости — свяжитесь с нами для обсуждения условий.";
+      discountNode.className = "discount-info discount-special";
+    } else if (state.qty >= 1500) {
+      discountNode.textContent = "Применена скидка 6% (при заказе от 1500 шт.)";
+      discountNode.className = "discount-info discount-applied";
+    } else if (state.qty >= 500) {
+      discountNode.textContent = "Применена скидка 3% (при заказе от 500 шт.)";
+      discountNode.className = "discount-info discount-applied";
+    } else {
+      discountNode.textContent = "";
+      discountNode.className = "discount-info";
+    }
+  }
+
   drawPreview(state);
 
   setDiagnostics();
