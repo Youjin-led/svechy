@@ -172,15 +172,6 @@ function buildCartMessage(items) {
   ].join("\n");
 }
 
-function updateCartLinks(message) {
-  const encoded = encodeURIComponent(message);
-  const email = document.querySelector("[data-send-cart='email']");
-  const whatsapp = document.querySelector("[data-send-cart='whatsapp']");
-  if (email) email.href =
-    `mailto:${contacts.email}?subject=${encodeURIComponent("Заказ Svetlo")}&body=${encoded}`;
-  if (whatsapp) whatsapp.href = `${contacts.whatsapp}?text=${encoded}`;
-}
-
 function renderCartPage() {
   const cartPage = document.querySelector("[data-cart-page]");
   if (!cartPage) return;
@@ -189,10 +180,11 @@ function renderCartPage() {
   const totalNode = cartPage.querySelector("[data-cart-total]");
   const countNode = cartPage.querySelector("[data-cart-count]");
   const emptyNode = cartPage.querySelector("[data-cart-empty]");
+  const checkoutBtn = cartPage.querySelector("[data-checkout]");
+  const statusNode = cartPage.querySelector("[data-cart-status]");
   const items = readCart();
   const total = items.reduce((sum, item) => sum + calculateLineTotal(item.price, item.qty), 0);
   const count = items.reduce((sum, item) => sum + item.qty, 0);
-  const message = buildCartMessage(items);
 
   if (listNode) {
     listNode.innerHTML = items.length ? items.map((item) => `
@@ -211,7 +203,8 @@ function renderCartPage() {
   if (totalNode) totalNode.textContent = money(total);
   if (countNode) countNode.textContent = count ? `${count} ${count === 1 ? "товар" : "позиций"} в заказе.` : "Корзина пуста.";
   if (emptyNode) emptyNode.hidden = Boolean(items.length);
-  updateCartLinks(message);
+  if (checkoutBtn) checkoutBtn.disabled = !items.length;
+  if (statusNode) statusNode.textContent = "";
 }
 
 function getState() {
@@ -596,6 +589,18 @@ document.addEventListener("click", async (event) => {
     setTimeout(() => {
       addCalculatedButton.textContent = "Добавить в корзину";
     }, 1200);
+  }
+
+  const checkoutButton = event.target.closest("[data-checkout]");
+  if (checkoutButton) {
+    const items = readCart();
+    if (!items.length) return;
+    const message = buildCartMessage(items);
+    const encoded = encodeURIComponent(message);
+    window.open(`${contacts.whatsapp}?text=${encoded}`, "_blank");
+    const statusNode = document.querySelector("[data-cart-status]");
+    if (statusNode) statusNode.textContent = "Заказ отправлен в WhatsApp. Ожидайте подтверждения.";
+    return;
   }
 
   const removeButton = event.target.closest("[data-cart-remove]");
