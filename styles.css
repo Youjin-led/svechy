@@ -1404,7 +1404,17 @@ textarea {
     line-height: 1.45;
   }
 
-  .home-contact-strip { display: none; }
+  .home-contact-strip {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 0 14px;
+    padding: 14px;
+    text-align: center;
+  }
+  .home-contact-strip strong { font-size: 16px; }
+  .home-contact-strip span { font-size: 13px; }
+  .home-contact-strip a { font-size: 13px; }
   .hero-dev { display: none; }
 
   .section { padding: 40px 14px; }
