@@ -1378,7 +1378,7 @@ textarea {
   h2 { font-size: 28px; }
 
   .hero-shop {
-    min-height: calc(100vh - 56px);
+    min-height: auto;
     justify-content: flex-start;
     padding-bottom: 0;
     background:
