@@ -1382,7 +1382,6 @@ textarea {
     justify-content: flex-start;
     padding-bottom: 0;
     background:
-      linear-gradient(180deg, rgba(246, 241, 237, 0.96) 0%, rgba(246, 241, 237, 0.76) 44%, rgba(246, 241, 237, 0.18) 70%, rgba(246, 241, 237, 0.06) 100%),
       linear-gradient(0deg, rgba(23, 22, 21, 0.03), rgba(23, 22, 21, 0.03)),
       url("assets/candle-product-06.png") 55% 5% / auto 58% no-repeat;
   }
@@ -1546,7 +1545,6 @@ textarea {
   }
   .hero-shop {
     background:
-      linear-gradient(180deg, rgba(246, 241, 237, 0.96) 0%, rgba(246, 241, 237, 0.78) 46%, rgba(246, 241, 237, 0.18) 72%, rgba(246, 241, 237, 0.06) 100%),
       linear-gradient(0deg, rgba(23, 22, 21, 0.03), rgba(23, 22, 21, 0.03)),
       url("assets/candle-product-06.png") 57% 5% / auto 55% no-repeat;
   }
