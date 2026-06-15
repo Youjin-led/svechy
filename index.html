@@ -7,16 +7,22 @@
   <link rel="icon" href="data:," />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=9" />
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="index.html" aria-label="Svetlo">
       <span class="brand-mark">Svetlo</span>
     </a>
-    <nav class="nav" aria-label="Навигация">
+    <button class="menu-toggle" aria-label="Открыть меню" type="button">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" aria-label="Навигация"><a href="index.html">Главная</a>
       <a href="calculator.html">Калькулятор</a>
-      <details class="nav-dropdown"><summary><a class="nav-parent" href="wholesale.html">Оптовые продажи</a></summary><div class="dropdown-panel wide">
+      <details class="nav-dropdown">
+        <summary><a class="nav-parent" href="wholesale.html">Оптовые продажи</a></summary>
+        <div class="dropdown-panel wide">
+          <a href="wholesale.html">Все оптовые товары</a>
           <a href="category.html?section=wholesale&item=Свечи%20в%20таре">Свечи в таре</a>
           <a href="category.html?section=wholesale&item=Формовые%20свечи">Формовые свечи</a>
           <a href="category.html?section=wholesale&item=Соль%20для%20ванн">Соль для ванн</a>
@@ -31,7 +37,10 @@
           <a href="category.html?section=wholesale&item=Рум%20спреи">Рум спреи</a>
         </div>
       </details>
-      <details class="nav-dropdown"><summary><a class="nav-parent" href="maker-goods.html">Товары для свечеваров</a></summary><div class="dropdown-panel">
+      <details class="nav-dropdown">
+        <summary><a class="nav-parent" href="maker-goods.html">Товары для свечеваров</a></summary>
+        <div class="dropdown-panel">
+          <a href="maker-goods.html">Все товары</a>
           <a href="category.html?section=maker&item=Красители">Красители</a>
           <a href="category.html?section=maker&item=Вощина">Вощина</a>
           <a href="category.html?section=maker&item=Цветные%20воски">Цветные воски</a>
@@ -44,14 +53,20 @@
       </details>
       <a href="partners.html">Партнеры</a>
       <a href="reviews.html">Отзывы</a>
-      <a href="blog.html">Блог</a><a href="cart.html">Корзина</a><a href="contacts.html">Контакты</a>
+      <a href="blog.html">Блог</a>
+      <a href="cart.html">Корзина</a>
+      <a href="contacts.html">Контакты</a>
     </nav>
   </header>
 
   <main id="top">
     <div class="hero-shop">
       <div class="hero-copy">
-        <h1>Ароматы для дома, свечи и косметические продукты оптом под вашим брендом</h1>
+        <h1>
+          <span>Ароматы для дома,</span>
+          <span>свечи и косметические продукты</span>
+          <span>оптом под вашим брендом</span>
+        </h1>
       </div>
       <div class="home-contact-strip" aria-label="Контакты">
         <strong>Svetlo</strong>

@@ -58,6 +58,17 @@ DEFAULT_STRATEGIES = {
             "role_order": ["art_director", "shader_materials", "camera_interaction", "final_canvas"],
         },
     },
+    "tradelab": {
+        "description": "Trading strategy for TradeLab tasks: incubation, risk, discovery, review cycles.",
+        "hyperparams": {
+            "temperature": 0.15,
+            "max_steps": 10,
+            "memory_k": 6,
+            "exploration": 0.12,
+            "verification": "tradelab_pipeline",
+            "role_order": ["risk_analyst", "incubation_manager", "discovery_scout", "review_auditor"],
+        },
+    },
 }
 
 
@@ -200,6 +211,9 @@ def fallback_strategy(domain: str, complexity: float, novelty: float) -> str:
     visual_domains = {"3d", "frontend", "visual", "design", "web"}
     if domain in visual_domains:
         return "visual_reference"
+    trading_domains = {"trading", "tradelab", "finance", "risk", "incubation"}
+    if domain in trading_domains:
+        return "tradelab"
     if complexity < 0.28 and novelty < 0.35:
         return "fast"
     if complexity > 0.68 or novelty > 0.68:

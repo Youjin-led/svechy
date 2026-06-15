@@ -1,6 +1,16 @@
+#!/usr/bin/env python3
+"""agent_checkpoint.py — создание и просмотр чекпоинтов проекта.
+
+Использование:
+  python tools/agent_checkpoint.py create "метка"
+  python tools/agent_checkpoint.py list
+
+Проблема: shutil.copy2 зависает на Windows с кириллицей в пути.
+Решение: читаем/пишем файлы вручную через open().
+"""
+
 import argparse
 import json
-import shutil
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -18,6 +28,7 @@ FILES = [
     "AGENT_ROLES.md",
     "PERMISSIONS.md",
     "package.json",
+    "BOOTSTRAP.md",
 ]
 
 if hasattr(sys.stdout, "reconfigure"):
@@ -26,6 +37,18 @@ if hasattr(sys.stdout, "reconfigure"):
 
 def stamp() -> str:
     return datetime.now().strftime("%Y%m%d-%H%M%S")
+
+
+def safe_copy(src: Path, dst: Path) -> None:
+    """Копирует файл байт-в-байт без метаданных (не зависает на кириллице)."""
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    with open(src, "rb") as f_in:
+        with open(dst, "wb") as f_out:
+            while True:
+                chunk = f_in.read(65536)
+                if not chunk:
+                    break
+                f_out.write(chunk)
 
 
 def create(args: argparse.Namespace) -> None:
@@ -39,13 +62,12 @@ def create(args: argparse.Namespace) -> None:
         if not source.exists():
             continue
         destination = target / relative
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(source, destination)
+        safe_copy(source, destination)
         copied.append(relative)
 
     db = ROOT / ".agent_memory.sqlite3"
     if db.exists():
-        shutil.copy2(db, target / ".agent_memory.sqlite3")
+        safe_copy(db, target / ".agent_memory.sqlite3")
         copied.append(".agent_memory.sqlite3")
 
     manifest = {

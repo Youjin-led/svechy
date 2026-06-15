@@ -468,12 +468,14 @@ function renderNavigationCategories() {
   if (!cmsData) return;
   ["wholesale", "maker"].forEach((sectionKey) => {
     const parentHref = sectionKey === "maker" ? "maker-goods.html" : "wholesale.html";
+    const allLabel = sectionKey === "maker" ? "Все товары для свечеваров" : "Все оптовые продажи";
     document.querySelectorAll(`.nav-parent[href="${parentHref}"]`).forEach((parent) => {
       const panel = parent.closest(".nav-dropdown")?.querySelector(".dropdown-panel");
       if (!panel) return;
-      panel.innerHTML = getCmsCategories(sectionKey).map((category) =>
+      const categoryLinks = getCmsCategories(sectionKey).map((category) =>
         `<a href="category.html?section=${sectionKey}&item=${encodeURIComponent(category.name)}">${escapeHtml(category.name)}</a>`
       ).join("");
+      panel.innerHTML = `<a href="${parentHref}">${allLabel}</a>${categoryLinks}`;
     });
   });
 }
@@ -569,6 +571,106 @@ async function refreshCmsViews() {
   renderBlogPage();
   renderReviewsPage();
   renderAdminPage();
+}
+
+/* ===== Бургер-меню ===== */
+function setupMobileMenu() {
+  const header = document.querySelector(".topbar");
+  const nav = header?.querySelector(".nav");
+  if (!header || !nav) return;
+
+  let toggle = header.querySelector(".menu-toggle");
+  if (!toggle) {
+    toggle = document.createElement("button");
+    toggle.className = "menu-toggle";
+    toggle.type = "button";
+    toggle.setAttribute("aria-label", "Открыть меню");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.innerHTML = "<span></span><span></span><span></span>";
+    header.querySelector(".brand")?.after(toggle);
+  }
+
+  let mobileMenu = document.querySelector(".mobile-menu");
+  if (!mobileMenu) {
+    mobileMenu = document.createElement("div");
+    mobileMenu.className = "mobile-menu";
+    mobileMenu.hidden = true;
+    mobileMenu.innerHTML = '<nav class="mobile-menu__panel" aria-label="Мобильная навигация"></nav>';
+    header.after(mobileMenu);
+  }
+  const panel = mobileMenu.querySelector(".mobile-menu__panel");
+
+  const makeLink = (href, text, className = "mobile-menu__link") => {
+    const link = document.createElement("a");
+    link.className = className;
+    link.href = href;
+    link.textContent = text.trim();
+    return link;
+  };
+
+  const rebuildMobileMenu = () => {
+    panel.innerHTML = "";
+
+    if (!nav.querySelector('a[href="index.html"]')) {
+      panel.append(makeLink("index.html", "Главная"));
+    }
+
+    [...nav.children].forEach((item) => {
+      if (item.matches("a")) {
+        panel.append(makeLink(item.getAttribute("href") || "#", item.textContent));
+        return;
+      }
+
+      if (!item.matches(".nav-dropdown")) return;
+
+      const parent = item.querySelector(".nav-parent");
+      const summary = item.querySelector("summary");
+      const parentHref = parent?.getAttribute("href") || "#";
+      const parentText = parent?.textContent || summary?.textContent || "";
+      const group = document.createElement("div");
+      group.className = "mobile-menu__group";
+      group.append(makeLink(parentHref, parentText, "mobile-menu__link mobile-menu__link--primary"));
+
+      const sublist = document.createElement("div");
+      sublist.className = "mobile-menu__sublist";
+      item.querySelectorAll(".dropdown-panel a").forEach((subLink) => {
+        const href = subLink.getAttribute("href") || "#";
+        if (href === parentHref) return;
+        sublist.append(makeLink(href, subLink.textContent, "mobile-menu__sublink"));
+      });
+      if (sublist.children.length) group.append(sublist);
+      panel.append(group);
+    });
+  };
+
+  const setMenuOpen = (isOpen) => {
+    if (isOpen) rebuildMobileMenu();
+    mobileMenu.hidden = !isOpen;
+    mobileMenu.classList.toggle("open", isOpen);
+    toggle.classList.toggle("active", isOpen);
+    toggle.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    document.body.classList.toggle("mobile-menu-open", isOpen);
+  };
+
+  toggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setMenuOpen(!mobileMenu.classList.contains("open"));
+  });
+
+  mobileMenu.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setMenuOpen(false);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!mobileMenu.classList.contains("open")) return;
+    if (event.target.closest(".mobile-menu__panel") || event.target.closest(".menu-toggle")) return;
+    setMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && mobileMenu.classList.contains("open")) setMenuOpen(false);
+  });
 }
 
 document.addEventListener("click", async (event) => {
@@ -697,6 +799,7 @@ document.addEventListener("keydown", (event) => {
 });
 
 async function init() {
+  setupMobileMenu();
   await loadCmsData();
   setupCalculatorProduct();
   renderNavigationCategories();

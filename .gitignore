@@ -1,6 +1,34 @@
-# TradeLab — отдельный проект в C:\Users\Ардор\OneDrive\Рабочий стол\TradeLab
+# TradeLab — отдельный проект
 tradelab-*
 TRADELAB*
 run-tradelab-*
 tools/tradelab_*
 tools/check_tradelab_syntax.js
+
+# Node
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.pyc
+.chroma_db/
+.agent_memory.sqlite3
+.agent_goals.json
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Checkpoints
+checkpoints/
+
+# Visual QA
+visual-qa/
+
+# Logs
+*.log

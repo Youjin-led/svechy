@@ -1,5 +1,5 @@
 {
-  "name": "multi-agent-threejs-site",
+  "name": "dz1-agent-site",
   "version": "1.0.0",
   "private": true,
   "type": "commonjs",
@@ -20,6 +20,9 @@
     "agent:checkpoint": "set UV_CACHE_DIR=.uv-cache&& uv run python tools/agent_checkpoint.py",
     "agent:evals": "set UV_CACHE_DIR=.uv-cache&& uv run python tools/agent_evals.py",
     "agent:meta": "set UV_CACHE_DIR=.uv-cache&& uv run python tools/agent_meta.py",
+    "strategy:choose": "set UV_CACHE_DIR=.uv-cache&& uv run python tools/agent_strategy_wrapper.py choose",
+    "strategy:record": "set UV_CACHE_DIR=.uv-cache&& uv run python tools/agent_strategy_wrapper.py record",
+    "strategy:strategies": "set UV_CACHE_DIR=.uv-cache&& uv run python tools/agent_strategy_wrapper.py strategies",
     "agent:goal": "set UV_CACHE_DIR=.uv-cache&& uv run python tools/agent_goal.py",
     "tradelab:incubate": "node tools/tradelab_incubate_once.js",
     "tradelab:gate": "node tools/tradelab_real_money_gate.js",
@@ -41,14 +44,29 @@
     "tradelab:risk": "node -e \"console.log(JSON.stringify(require('./tools/tradelab_risk_controls').portfolioKillSwitch(), null, 2))\"",
     "scene:status": "set UV_CACHE_DIR=.uv-cache&& uv run python tools/scene_status.py",
     "scene:attempt": "set UV_CACHE_DIR=.uv-cache&& uv run python tools/scene_attempt.py",
-    "hf:infer": "python tools/hf_inference.py"
+    "hf:infer": "python tools/hf_inference.py",
+    "rag:add": "python tools/agent_rag_memory.py add",
+    "rag:search": "python tools/agent_rag_memory.py search",
+    "rag:list": "python tools/agent_rag_memory.py list",
+    "rag:rebuild": "python tools/agent_rag_memory.py rebuild",
+    "orchestrator": "python tools/agent_orchestrator.py",
+    "orchestrator:dispatch": "python tools/agent_orchestrator.py dispatch",
+    "orchestrator:status": "python tools/agent_orchestrator.py status",
+    "compress": "python tools/agent_context_compressor.py compress",
+    "compress:status": "python tools/agent_context_compressor.py status",
+    "graph:build": "python tools/agent_knowledge_graph.py build",
+    "graph:search": "python tools/agent_knowledge_graph.py search",
+    "graph:impact": "python tools/agent_knowledge_graph.py impact",
+    "benchmark:record": "python tools/agent_benchmark.py record",
+    "benchmark:report": "python tools/agent_benchmark.py report",
+    "benchmark:dashboard": "python tools/agent_benchmark.py dashboard"
   },
   "dependencies": {
-    "puppeteer": "^22.15.0",
-    "three": "^0.164.1"
+    "puppeteer": "^25.1.0",
+    "three": "^0.184.0"
   },
   "devDependencies": {
     "sharp": "^0.35.1",
-    "typescript": "^5.5.4"
+    "typescript": "^6.0.3"
   }
 }
