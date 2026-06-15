@@ -1380,23 +1380,28 @@ textarea {
   .hero-shop {
     min-height: auto;
     justify-content: flex-start;
-    padding: 0 0 18px;
-    background:
-      linear-gradient(180deg, rgba(246, 241, 237, 0.76) 0%, rgba(246, 241, 237, 0.26) 54%, rgba(246, 241, 237, 0.92) 100%),
-      url("assets/candle-product-06.png") 50% 0 / 100% auto no-repeat;
+    padding: 10px 10px 18px;
+    background: transparent;
   }
   .hero-copy {
-    min-height: clamp(260px, 56vw, 330px);
+    min-height: clamp(390px, 92vw, 480px);
     display: flex;
     align-items: flex-start;
-    padding: 18px 12px 0;
+    padding: 24px 18px;
     gap: 0;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    background:
+      linear-gradient(180deg, rgba(246, 241, 237, 0.92) 0%, rgba(246, 241, 237, 0.7) 34%, rgba(246, 241, 237, 0.14) 68%, rgba(246, 241, 237, 0.04) 100%),
+      linear-gradient(90deg, rgba(246, 241, 237, 0.96) 0%, rgba(246, 241, 237, 0.68) 46%, rgba(246, 241, 237, 0.1) 100%),
+      url("assets/candle-product-06.png") 62% 100% / auto 72% no-repeat;
+    box-shadow: 0 18px 42px rgba(23, 22, 21, 0.1);
   }
   .hero-copy h1 {
-    max-width: 100%;
+    max-width: 390px;
     color: var(--ink);
-    font-size: clamp(28px, 8.2vw, 38px);
-    line-height: 1.1;
+    font-size: clamp(30px, 7.8vw, 38px);
+    line-height: 1.05;
     text-wrap: balance;
   }
   .hero-copy h1 span {
@@ -1414,25 +1419,35 @@ textarea {
   }
 
   .home-contact-strip {
-    width: calc(100% - 20px);
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 8px;
-    margin: 0 10px;
-    padding: 16px 14px;
-    border-color: rgba(199, 136, 145, 0.42);
-    background: rgba(255, 250, 244, 0.94);
-    box-shadow: 0 14px 34px rgba(23, 22, 21, 0.1);
+    gap: 9px;
+    margin: 10px 0 0;
+    padding: 18px 16px;
+    border: 1px solid rgba(199, 136, 145, 0.4);
+    border-radius: 8px;
+    background: rgba(255, 250, 244, 0.96);
+    box-shadow: 0 14px 34px rgba(23, 22, 21, 0.09);
     text-align: center;
   }
   .home-contact-strip strong {
-    font-size: 16px;
+    color: var(--wine);
+    font-size: 17px;
   }
   .home-contact-strip span {
+    max-width: 260px;
+    justify-self: center;
+    color: rgba(23, 22, 21, 0.56);
     font-size: 12px;
+    line-height: 1.35;
   }
   .home-contact-strip a {
+    justify-self: center;
+    color: var(--ink);
     font-size: 13px;
+    font-weight: 800;
+    line-height: 1.25;
     white-space: normal;
   }
   .hero-dev { display: none; }
@@ -1570,17 +1585,16 @@ textarea {
 
 
 @media (max-width: 390px) {
-  .hero-copy h1 {
-    font-size: clamp(28px, 8.2vw, 34px);
-    line-height: 1.1;
-  }
-  .hero-shop {
-    background:
-      linear-gradient(180deg, rgba(246, 241, 237, 0.76) 0%, rgba(246, 241, 237, 0.26) 54%, rgba(246, 241, 237, 0.92) 100%),
-      url("assets/candle-product-06.png") 50% 0 / 100% auto no-repeat;
-  }
   .hero-copy {
-    min-height: clamp(250px, 55vw, 310px);
-    padding-top: 16px;
+    min-height: 374px;
+    padding: 22px 14px;
+    background:
+      linear-gradient(180deg, rgba(246, 241, 237, 0.94) 0%, rgba(246, 241, 237, 0.72) 35%, rgba(246, 241, 237, 0.12) 72%, rgba(246, 241, 237, 0.04) 100%),
+      linear-gradient(90deg, rgba(246, 241, 237, 0.97) 0%, rgba(246, 241, 237, 0.72) 50%, rgba(246, 241, 237, 0.1) 100%),
+      url("assets/candle-product-06.png") 64% 100% / auto 70% no-repeat;
+  }
+  .hero-copy h1 {
+    font-size: clamp(28px, 7.8vw, 32px);
+    line-height: 1.08;
   }
 }
