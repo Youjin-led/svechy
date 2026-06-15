@@ -1384,7 +1384,7 @@ textarea {
     background:
       linear-gradient(180deg, rgba(246, 241, 237, 0.96) 0%, rgba(246, 241, 237, 0.76) 44%, rgba(246, 241, 237, 0.18) 70%, rgba(246, 241, 237, 0.06) 100%),
       linear-gradient(0deg, rgba(23, 22, 21, 0.03), rgba(23, 22, 21, 0.03)),
-      url("assets/candle-product-06.png") 55% 40% / auto 58% no-repeat;
+      url("assets/candle-product-06.png") 55% 20% / auto 58% no-repeat;
   }
   .hero-copy {
     padding: clamp(46px, 10vh, 82px) 18px 0;
@@ -1548,6 +1548,6 @@ textarea {
     background:
       linear-gradient(180deg, rgba(246, 241, 237, 0.96) 0%, rgba(246, 241, 237, 0.78) 46%, rgba(246, 241, 237, 0.18) 72%, rgba(246, 241, 237, 0.06) 100%),
       linear-gradient(0deg, rgba(23, 22, 21, 0.03), rgba(23, 22, 21, 0.03)),
-      url("assets/candle-product-06.png") 57% 40% / auto 55% no-repeat;
+      url("assets/candle-product-06.png") 57% 20% / auto 55% no-repeat;
   }
 }
